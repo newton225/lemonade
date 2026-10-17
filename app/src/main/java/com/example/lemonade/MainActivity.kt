@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LemonadeTheme {
-                AppCitronnade()
+                LemonadeApp()
             }
         }
     }
@@ -55,7 +55,7 @@ val vertMenthe = Color(0xFFC3ECD2)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppCitronnade() {
+fun LemonadeApp() {
     // 1 = citronnier, 2 = citron, 3 = verre plein, 4 = verre vide
     var etape by rememberSaveable { mutableIntStateOf(1) }
     var nbPressions by rememberSaveable { mutableIntStateOf(0) }
@@ -150,6 +150,6 @@ fun EtapeCitronnade(
 @Composable
 fun ApercuCitronnade() {
     LemonadeTheme {
-        AppCitronnade()
+        LemonadeApp()
     }
 }
